@@ -1,0 +1,196 @@
+/*-- scss:defaults --*/
+
+$colors: (
+  "red": #FA5F5C,
+  "blue": #394D85,
+  "darkblue": #13234B,
+  "yellow": #FFF7C7,
+  "white": #FEFEFE
+);
+
+@function theme-color($color) {
+  @return map-get($colors, $color);
+}
+
+@each $name, $color in $colors {
+  .color-#{$name} {
+    color: $color;
+  }
+
+  .bg-#{$name} {
+    background-color: $color;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang&family=Ingrid+Darling&family=Quicksand&display=swap');
+
+$body-bg: theme-color("yellow");
+$link-color: theme-color("blue");
+$code-color: theme-color("blue");
+$body-color: theme-color("darkblue");
+$presentation-heading-color: theme-color("red");
+$presentation-heading-font: 'Fahkwang', sans-serif;
+$font-family-sans-serif: 'Quicksand', sans-serif;
+$code-block-font-size: 0.6em;
+/*-- scss:rules --*/
+
+.title-text {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  text-align: center;
+  color: theme-color("red");
+}
+
+.reveal pre.sourceCode code {
+  background-color: theme-color("white");
+}
+
+.reveal div.sourceCode pre code {
+  padding-bottom: 15px;
+}
+
+.reveal .footer.footer-bg {
+  width: unset;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: theme-color("white");
+  padding: 2px 10px;
+  border-radius: 4px;
+}
+
+.reveal pre.sourceCode code {
+  max-height: fit-content;
+}
+
+.reveal div.sourceCode {
+  border: unset !important;
+}
+
+div.sourceCode {
+  background-color: unset !important;
+}
+
+.curly {
+  font-family: 'Ingrid Darling', cursive;
+  font-size: 2em;
+}
+
+.center-v {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+@mixin center-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+@mixin background-full {
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.theme-title1 {
+  &:is(.slide-background) {
+    background-image: url('../../../../../assets/title1.svg');
+    @include background-full;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 3em;
+  }
+  h3 {
+    color: theme-color("blue");
+    text-align: center;
+    font-size: 2em;
+  }
+}
+
+.theme-title2 {
+  &:is(.slide-background) {
+    background-image: url('../../../../../assets/title2.svg');
+    @include background-full;
+  }
+  h2 {
+    text-align: center;
+    font-size: 3em;
+  }
+  h3 {
+    color: theme-color("blue");
+    text-align: center;
+    font-size: 2em;
+  }
+}
+
+.theme-section1 {
+  &:is(.slide-background) {
+    background-image: url('../../../../../assets/section1.svg');
+    @include background-full;
+  }
+  h2, h3, h4, h5, p, pre {
+    margin-left: 100px;
+    width: 65%;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    color: theme-color("blue");
+    font-size: 1.5em;
+  }
+}
+
+.theme-section2 {
+  &:is(.slide-background) {
+    background-image: url('../../../../../assets/section2.svg');
+    @include background-full;
+  }
+  h2, h3, h4, h5, p, pre {
+    margin-left: 100px;
+    width: 65%;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    color: theme-color("blue");
+    font-size: 1.5em;
+  }
+}
+
+.theme-section3 {
+  &:is(.slide-background) {
+    background-image: url('../../../../../assets/section3.svg');
+    @include background-full;
+  }
+  h2, h3, h4, h5, p, pre {
+    margin-left: 350px;
+    width: 65%;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    color: theme-color("blue");
+    font-size: 1.5em;
+  }
+}
+
+@mixin theme-slide($number) {
+  .theme-slide#{$number} {
+    &:is(.slide-background) {
+      background-image: url('../../../../../assets/slide#{$number}.svg');
+      @include background-full;
+    }
+  }
+}
+
+@for $i from 1 through 15 {
+  @include theme-slide($i);
+}
