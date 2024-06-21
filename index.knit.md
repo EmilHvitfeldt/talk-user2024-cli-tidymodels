@@ -27,7 +27,7 @@ error messages
 with [cli]{.color-blue}
 :::
 
-## tidymodels
+## tidymodels {.theme-slide1}
 
 ::: {.columns}
 ::: {.column}
@@ -46,7 +46,7 @@ And we throw a LOT of errors
 
 ![](images/tidymodels.png){.absolute right=0 top=0}
 
-##
+##  {.theme-slide2}
 
 ```r
 #> # A tibble: 12 × 10
@@ -98,7 +98,7 @@ Photo by <a href="https://unsplash.com/@wthen?utm_content=creditCopyText&utm_med
 Photo by <a href="https://unsplash.com/@stefanwagener?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Stefan Wagener</a> on <a href="https://unsplash.com/photos/empty-mountain-bridge-QM8nxL1X8mE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 :::
 
-## {cli} package 
+## {cli} package {.theme-slide3}
 
 > Helpers for Developing Command Line Interfaces
 
@@ -108,7 +108,7 @@ A suite of tools to build attractive command line interfaces (CLIs), from semant
 <https://cli.r-lib.org/index.html>
 :::
 
-## why {cli}?
+## why {cli}? {.theme-slide1}
 
 It can do a lot, not just error messages
 
@@ -116,7 +116,7 @@ It can do a lot, not just error messages
 
 It follows `rlang::abort()` with `cli::cli_abort()`
 
-## Passing calls around - before
+## Passing calls around - before {.theme-slide4}
 
 
 ::: {.cell}
@@ -143,7 +143,7 @@ user_facing_function(-5)
 :::
 
 
-## Passing calls around - after
+## Passing calls around - after {.theme-slide4}
 
 
 ::: {.cell}
@@ -170,7 +170,7 @@ user_facing_function(-5)
 :::
 
 
-## {glue} Interpolation
+## {glue} Interpolation {.theme-slide5}
 
 
 ::: {.cell}
@@ -197,7 +197,7 @@ user_facing_function(-5)
 :::
 
 
-## inline text formatting
+## inline text formatting {.theme-slide6}
 
 
 ::: {.cell}
@@ -225,7 +225,7 @@ user_facing_function(-5)
 :::
 
 
-## How to write a function that can error 
+## How to write a function that can error {.theme-slide7}
 
 ```r
 user_facing_function <- function(x) {
@@ -246,7 +246,7 @@ user_facing_function <- function(x) {
 user_facing_function(-5)
 ```
 
-## Priorities when writing user-facing functions
+## Priorities when writing user-facing functions {.theme-slide8}
 
 the checks should happen as early as possible
 
@@ -254,7 +254,7 @@ the checks should be as fast as possible
 
 constructing the error doesn't have to be that fast
 
-## Example 1 - before
+## Example 1 - before {.theme-slide9}
 
 
 ::: {.cell}
@@ -277,7 +277,7 @@ roc_curve(two_class_example, truth = truth, estimate = Class1)
 <https://github.com/tidymodels/yardstick/pull/485>
 :::
 
-## Example 1 - after
+## Example 1 - after {.theme-slide9}
 
 
 ::: {.cell}
@@ -299,7 +299,7 @@ roc_curve(two_class_example, truth = truth, estimate = Class1)
 <https://github.com/tidymodels/yardstick/pull/485>
 :::
 
-## Example 1 - solution
+## Example 1 - solution {.theme-slide9}
 
 ```r
 if ("estimate" %in% names(match.call(expand.dots = FALSE)$...)) {
@@ -317,7 +317,7 @@ if ("estimate" %in% names(match.call(expand.dots = FALSE)$...)) {
 <https://github.com/tidymodels/yardstick/pull/485>
 :::
 
-## Example 2 - before
+## Example 2 - before {.theme-slide10}
 
 
 ::: {.cell}
@@ -344,7 +344,7 @@ recipe(~ ., data = dat) %>%
 <https://github.com/tidymodels/recipes/pull/1327>
 :::
 
-## Example 2 - after
+## Example 2 - after {.theme-slide10}
 
 
 ::: {.cell}
@@ -370,7 +370,7 @@ recipe(~ ., data = dat) %>%
 <https://github.com/tidymodels/recipes/pull/1327>
 :::
 
-## Example 2 - solution
+## Example 2 - solution {.theme-slide10}
 
 ```r
 indicators <- tryCatch(
@@ -395,7 +395,7 @@ indicators <- tryCatch(
 <https://github.com/tidymodels/recipes/pull/1327>
 :::
 
-## Example 3 - before
+## Example 3 - before {.theme-slide11}
 
 
 ::: {.cell}
@@ -423,7 +423,7 @@ recipe(~., data = mtcars) |>
 <https://github.com/tidymodels/recipes/pull/1251>
 :::
 
-## Example 3 - after
+## Example 3 - after {.theme-slide11}
 
 
 ::: {.cell}
@@ -450,7 +450,7 @@ recipe(~., data = mtcars) |>
 <https://github.com/tidymodels/recipes/pull/1251>
 :::
 
-## Example 3 - solution
+## Example 3 - solution {.theme-slide11}
 
 ```r
 if (nrow(needs_tuning) > 0) {

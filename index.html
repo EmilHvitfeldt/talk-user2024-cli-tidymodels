@@ -398,7 +398,7 @@
 <p>with <span class="color-blue">cli</span></p>
 </div>
 </section>
-<section id="tidymodels" class="slide level2">
+<section id="tidymodels" class="slide level2 theme-slide1">
 <h2>tidymodels</h2>
 <div class="columns">
 <div class="column">
@@ -411,7 +411,7 @@
 </div>
 <p><img data-src="images/tidymodels.png" class="absolute" style="top: 0px; right: 0px; "></p>
 </section>
-<section id="section-1" class="slide level2">
+<section id="section-1" class="slide level2 theme-slide2">
 <h2></h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 12 × 10</span></span>
 <span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    package      cli_abort cli_warn cli_inform abort  warn inform  stop warning message</span></span>
@@ -456,7 +456,7 @@
 <p>Photo by <a href="https://unsplash.com/@stefanwagener?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Stefan Wagener</a> on <a href="https://unsplash.com/photos/empty-mountain-bridge-QM8nxL1X8mE?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></p>
 </div>
 </section>
-<section id="cli-package" class="slide level2">
+<section id="cli-package" class="slide level2 theme-slide3">
 <h2>{cli} package</h2>
 <blockquote>
 <p>Helpers for Developing Command Line Interfaces</p>
@@ -466,7 +466,7 @@
 <p><a href="https://cli.r-lib.org/index.html" class="uri">https://cli.r-lib.org/index.html</a></p>
 </div>
 </section>
-<section id="why-cli" class="slide level2">
+<section id="why-cli" class="slide level2 theme-slide1">
 <h2>why {cli}?</h2>
 <p>It can do a lot, not just error messages</p>
 <ul>
@@ -474,7 +474,7 @@
 </ul>
 <p>It follows <code>rlang::abort()</code> with <code>cli::cli_abort()</code></p>
 </section>
-<section id="passing-calls-around---before" class="slide level2">
+<section id="passing-calls-around---before" class="slide level2 theme-slide4">
 <h2>Passing calls around - before</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a>internal_checker <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
@@ -492,7 +492,7 @@
 
 </div>
 <img data-src="index_files/figure-revealjs//unnamed-chunk-2.svg" width="960" class="r-stretch"></section>
-<section id="passing-calls-around---after" class="slide level2">
+<section id="passing-calls-around---after" class="slide level2 theme-slide4">
 <h2>Passing calls around - after</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a>internal_checker <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">call =</span> rlang<span class="sc">::</span><span class="fu">caller_env</span>()) {</span>
@@ -510,7 +510,7 @@
 
 </div>
 <img data-src="index_files/figure-revealjs//unnamed-chunk-3.svg" width="960" class="r-stretch"></section>
-<section id="glue-interpolation" class="slide level2">
+<section id="glue-interpolation" class="slide level2 theme-slide5">
 <h2>{glue} Interpolation</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a>internal_checker <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">call =</span> rlang<span class="sc">::</span><span class="fu">caller_env</span>()) {</span>
@@ -528,7 +528,7 @@
 
 </div>
 <img data-src="index_files/figure-revealjs//unnamed-chunk-4.svg" width="960" class="r-stretch"></section>
-<section id="inline-text-formatting" class="slide level2">
+<section id="inline-text-formatting" class="slide level2 theme-slide6">
 <h2>inline text formatting</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="" aria-hidden="true" tabindex="-1"></a>internal_checker <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">call =</span> rlang<span class="sc">::</span><span class="fu">caller_env</span>()) {</span>
@@ -547,7 +547,7 @@
 
 </div>
 <img data-src="index_files/figure-revealjs//unnamed-chunk-5.svg" width="960" class="r-stretch"></section>
-<section id="how-to-write-a-function-that-can-error" class="slide level2">
+<section id="how-to-write-a-function-that-can-error" class="slide level2 theme-slide7">
 <h2>How to write a function that can error</h2>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a>user_facing_function <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
 <span id="cb6-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.numeric</span>(x)) {</span>
@@ -566,13 +566,13 @@
 <span id="cb6-15"><a href="" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-16"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">user_facing_function</span>(<span class="sc">-</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="priorities-when-writing-user-facing-functions" class="slide level2">
+<section id="priorities-when-writing-user-facing-functions" class="slide level2 theme-slide8">
 <h2>Priorities when writing user-facing functions</h2>
 <p>the checks should happen as early as possible</p>
 <p>the checks should be as fast as possible</p>
 <p>constructing the error doesn’t have to be that fast</p>
 </section>
-<section id="example-1---before" class="slide level2">
+<section id="example-1---before" class="slide level2 theme-slide9">
 <h2>Example 1 - before</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(yardstick)</span>
@@ -584,7 +584,7 @@
 <p><a href="https://github.com/tidymodels/yardstick/pull/485" class="uri">https://github.com/tidymodels/yardstick/pull/485</a></p>
 </div>
 </section>
-<section id="example-1---after" class="slide level2">
+<section id="example-1---after" class="slide level2 theme-slide9">
 <h2>Example 1 - after</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(yardstick)</span>
@@ -596,7 +596,7 @@
 <p><a href="https://github.com/tidymodels/yardstick/pull/485" class="uri">https://github.com/tidymodels/yardstick/pull/485</a></p>
 </div>
 </section>
-<section id="example-1---solution" class="slide level2">
+<section id="example-1---solution" class="slide level2 theme-slide9">
 <h2>Example 1 - solution</h2>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="st">"estimate"</span> <span class="sc">%in%</span> <span class="fu">names</span>(<span class="fu">match.call</span>(<span class="at">expand.dots =</span> <span class="cn">FALSE</span>)<span class="sc">$</span>...)) {</span>
 <span id="cb9-2"><a href="" aria-hidden="true" tabindex="-1"></a>  cli<span class="sc">::</span><span class="fu">cli_abort</span>(</span>
@@ -611,7 +611,7 @@
 <p><a href="https://github.com/tidymodels/yardstick/pull/485" class="uri">https://github.com/tidymodels/yardstick/pull/485</a></p>
 </div>
 </section>
-<section id="example-2---before" class="slide level2">
+<section id="example-2---before" class="slide level2 theme-slide10">
 <h2>Example 2 - before</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(recipes)</span>
@@ -627,7 +627,7 @@
 <p><a href="https://github.com/tidymodels/recipes/pull/1327" class="uri">https://github.com/tidymodels/recipes/pull/1327</a></p>
 </div>
 </section>
-<section id="example-2---after" class="slide level2">
+<section id="example-2---after" class="slide level2 theme-slide10">
 <h2>Example 2 - after</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(recipes)</span>
@@ -643,7 +643,7 @@
 <p><a href="https://github.com/tidymodels/recipes/pull/1327" class="uri">https://github.com/tidymodels/recipes/pull/1327</a></p>
 </div>
 </section>
-<section id="example-2---solution" class="slide level2">
+<section id="example-2---solution" class="slide level2 theme-slide10">
 <h2>Example 2 - solution</h2>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="" aria-hidden="true" tabindex="-1"></a>indicators <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(</span>
 <span id="cb12-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">model.matrix</span>(<span class="at">object =</span> levels, <span class="at">data =</span> indicators),</span>
@@ -665,7 +665,7 @@
 <p><a href="https://github.com/tidymodels/recipes/pull/1327" class="uri">https://github.com/tidymodels/recipes/pull/1327</a></p>
 </div>
 </section>
-<section id="example-3---before" class="slide level2">
+<section id="example-3---before" class="slide level2 theme-slide11">
 <h2>Example 3 - before</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(recipes)</span>
@@ -682,7 +682,7 @@
 <p><a href="https://github.com/tidymodels/recipes/pull/1251" class="uri">https://github.com/tidymodels/recipes/pull/1251</a></p>
 </div>
 </section>
-<section id="example-3---after" class="slide level2">
+<section id="example-3---after" class="slide level2 theme-slide11">
 <h2>Example 3 - after</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(recipes)</span>
@@ -699,7 +699,7 @@
 <p><a href="https://github.com/tidymodels/recipes/pull/1251" class="uri">https://github.com/tidymodels/recipes/pull/1251</a></p>
 </div>
 </section>
-<section id="example-3---solution" class="slide level2">
+<section id="example-3---solution" class="slide level2 theme-slide11">
 <h2>Example 3 - solution</h2>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(needs_tuning) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
 <span id="cb15-2"><a href="" aria-hidden="true" tabindex="-1"></a>  args <span class="ot">&lt;-</span> vctrs<span class="sc">::</span><span class="fu">vec_split</span>(needs_tuning<span class="sc">$</span>arg, needs_tuning<span class="sc">$</span>step)</span>

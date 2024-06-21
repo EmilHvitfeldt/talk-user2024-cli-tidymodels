@@ -35,6 +35,10 @@ $font-family-sans-serif: 'Quicksand', sans-serif;
 $code-block-font-size: 0.6em;
 /*-- scss:rules --*/
 
+h2 {
+  background-color: rgba($body-bg, 0.6);
+}
+
 .title-text {
   font-family: "Pacifico", cursive;
   font-weight: 400;
