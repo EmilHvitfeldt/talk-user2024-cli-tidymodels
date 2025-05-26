@@ -49,7 +49,7 @@ And we throw a LOT of errors
 :::
 :::
 
-![](images/tidymodels.png){.absolute right=0 top=0}
+![](images/tidymodels.webp){.absolute right=0 top=0}
 
 ##  {.theme-slide2}
 
@@ -75,29 +75,29 @@ And we throw a LOT of errors
 <https://gist.github.com/EmilHvitfeldt/0731497636221aa2d5db22e0dccd0774>
 :::
 
-## {background-image="images/wojciech-then-vOcN86ENwkU-unsplash.jpg"}
+## {background-image="images/wojciech-then-vOcN86ENwkU-unsplash.webp"}
 
 ::: fragment
-![](images/error1.png){.absolute left=0 top=0 width=500px}
+![](images/error1.webp){.absolute left=0 top=0 width=500px}
 :::
 
 ::: fragment
-![](images/error4.jpg){.absolute left=0 top=0 width=500px}
+![](images/error4.webp){.absolute left=0 top=0 width=500px}
 :::
 
 ::: fragment
-![](images/error2.png){.absolute left=0 top=0 width=500px}
+![](images/error2.webp){.absolute left=0 top=0 width=500px}
 :::
 
 ::: fragment
-![](images/error3.jpg){.absolute left=0 top=0 width=500px}
+![](images/error3.webp){.absolute left=0 top=0 width=500px}
 :::
 
 ::: {.footer .footer-bg}
 Photo by <a href="https://unsplash.com/@wthen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Wojciech Then</a> on <a href="https://unsplash.com/photos/green-covered-mountains-vOcN86ENwkU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 :::
 
-## {background-image="images/stefan-wagener-QM8nxL1X8mE-unsplash.jpg"}
+## {background-image="images/stefan-wagener-QM8nxL1X8mE-unsplash.webp"}
 
 ::: {.footer .footer-bg}
 Photo by <a href="https://unsplash.com/@stefanwagener?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Stefan Wagener</a> on <a href="https://unsplash.com/photos/empty-mountain-bridge-QM8nxL1X8mE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
